@@ -1,0 +1,28 @@
+object CustomDatabaseConnection {
+    private var isConnected = false
+
+    fun establishConnection() {
+        if (!isConnected) {
+            println("Establishing connection to custom database...")
+            isConnected = true
+            println("Connected to custom database")
+        } else {
+            println("Already connected to custom database")
+        }
+    }
+
+    fun closeConnection() {
+        if (isConnected) {
+            println("Closing connection to custom database...")
+            isConnected = false
+            println("Disconnected from custom database")
+        } else {
+            println("Already disconnected from custom database")
+        }
+    }
+}
+
+fun main() {
+    CustomDatabaseConnection.establishConnection()
+    CustomDatabaseConnection.closeConnection()
+}

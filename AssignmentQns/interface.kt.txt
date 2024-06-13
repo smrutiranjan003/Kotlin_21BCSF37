@@ -1,0 +1,35 @@
+interface Shape {
+    fun drawShape()
+    fun changeSize(newSize: Double)
+}
+
+class Rectangle : Shape {
+    override fun drawShape() {
+        println("Drawing a rectangle")
+    }
+    
+    override fun changeSize(newSize: Double) {
+        println("Resizing rectangle to size: $newSize")
+    }
+}
+
+class Circle : Shape {
+    override fun drawShape() {
+        println("Drawing a circle")
+    }
+    
+    override fun changeSize(newSize: Double) {
+        println("Resizing circle to diameter: $newSize")
+    }
+}
+
+fun main() {
+    val rectangle = Rectangle()
+    val circle = Circle()
+    
+    rectangle.drawShape()
+    circle.drawShape()
+    
+    rectangle.changeSize(15.0)
+    circle.changeSize(12.5)
+}

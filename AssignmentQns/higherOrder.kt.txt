@@ -1,0 +1,20 @@
+fun operation(a: Int, b: Int, op: (Int, Int) -> Int): Int {
+    return op(a, b)
+}
+
+fun main() {
+    val addFunction: (Int, Int) -> Int = { x, y -> x + y }
+
+    val multiplyFunction: (Int, Int) -> Int = { x, y -> x * y }
+
+    val subtractFunction: (Int, Int) -> Int = { x, y -> x - y }
+
+    val sum = operation(7, 4, addFunction)
+    println("The sum is: $sum")
+
+    val product = operation(7, 4, multiplyFunction)
+    println("The product is: $product")
+
+    val difference = operation(7, 4, subtractFunction)
+    println("The difference is: $difference")
+}

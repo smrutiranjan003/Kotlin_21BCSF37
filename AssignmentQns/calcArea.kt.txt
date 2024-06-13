@@ -1,0 +1,18 @@
+fun computeArea(length: Double, breadth: Double): Double {
+    return length * breadth
+}
+
+fun computeArea(radius: Double): Double {
+    return Math.PI * radius * radius
+}
+
+fun main() {
+    val length = 7.0
+    val breadth = 2.5
+    val rectangleArea = computeArea(length, breadth)
+    println("The area of the rectangle is: $rectangleArea")
+
+    val radius = 3.5
+    val circleArea = computeArea(radius)
+    println("The area of the circle is: $circleArea")
+}

@@ -1,0 +1,17 @@
+fun String.isPalindrome(): Boolean {
+    var left = 0
+    var right = this.length - 1
+    while (left <= right) {
+        if (this[left] != this[right]) {
+            return false
+        }
+        left++
+        right--
+    }
+    return true
+}
+
+fun main() {
+    val str = "racecar"
+    println("\"$str\" is a palindrome: ${str.isPalindrome()}")
+}

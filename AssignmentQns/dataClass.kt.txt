@@ -1,0 +1,13 @@
+data class Person(val name: String, val age: Int, val address: String)
+
+fun main() {
+    // Original person object
+    val person1 = Person(name = "Aarav Sharma", age = 30, address = "Mumbai, Maharashtra")
+
+    // Create a copy of person1 with modified age and address
+    val person2 = person1.copy(age = 25, address = "Delhi, Delhi")
+
+    // Print original and new person objects
+    println("Original Person: $person1")
+    println("New Person: $person2")
+}
