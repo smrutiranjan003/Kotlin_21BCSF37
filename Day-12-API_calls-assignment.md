@@ -1,5 +1,3 @@
-Here's a revised version of the provided project setup, formatted as a README file. The code has been adjusted for better clarity and usability.
-
 # My API Application
 
 This project demonstrates how to create an Android application using Jetpack Compose, Retrofit for networking, Gson for JSON parsing, Coil for image loading, and LiveData for observing data changes.
