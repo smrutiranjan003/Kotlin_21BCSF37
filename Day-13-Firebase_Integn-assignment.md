@@ -1,6 +1,6 @@
 ### SOURCE CODES
 
-kotlin
+```kotlin
 // build.gradle (project)
 
 plugins {
@@ -8,9 +8,9 @@ plugins {
     alias(libs.plugins.jetbrainsKotlinAndroid) apply false
     id("com.google.gms.google-services") version "4.4.2" apply false
 }
+```
 
-
-kotlin
+```kotlin
 // build.gradle (app)
 
 buildscript {
@@ -107,9 +107,9 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version")
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:$lifecycle_version")
 }
+```
 
-
-kotlin
+```kotlin
 // AndroidManifest.xml
 
 <?xml version="1.0" encoding="utf-8"?>
@@ -142,9 +142,9 @@ kotlin
     </application>
 
 </manifest>
+```
 
-
-kotlin
+```kotlin
 // User.kt
 
 package com.example.firebaseapplication
@@ -153,9 +153,9 @@ data class User(
     val email: String,
     val password: String
 )
+```
 
-
-kotlin
+```kotlin
 // AuthState.kt
 
 package com.example.firebaseapplication
@@ -168,9 +168,9 @@ sealed class AuthState {
     data class Success(val user: FirebaseUser?) : AuthState()
     data class Error(val message: String) : AuthState()
 }
+```
 
-
-kotlin
+```kotlin
 // AUthViewModel.kt
 
 package com.example.firebaseapplication
@@ -226,9 +226,9 @@ class AuthViewModel : ViewModel() {
         _authState.value = AuthState.Idle
     }
 }
+```
 
-
-kotlin
+```kotlin
 // MainScreen.kt
 
 package com.example.firebaseapplication
@@ -263,9 +263,9 @@ fun MainScreenPreview() {
         MainScreen()
     }
 }
+```
 
-
-kotlin
+```kotlin
 // SccessScreen.kt
 
 package com.example.firebaseapplication
@@ -312,9 +312,9 @@ fun SuccessScreenPreview() {
         SuccessScreen(navController = rememberNavController(), viewModel = AuthViewModel())
     }
 }
+```
 
-
-kotlin
+```kotlin
 // MainActivity.kt
 
 package com.example.firebaseapplication
@@ -334,12 +334,11 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
-
+```
 
 ### OUTPUT
 
-![Output Image](../screenshots/firebase-email-psswd-auth-1.png)
-![Output Image](../screenshots/firebase-email-psswd-auth-2.png)
-![Output Image](../screenshots/firebase-email-psswd-auth-3.png)
-![Output Image](../screenshots/firebase-email-psswd-auth-4.png)
-
+![Output Image](../screenshots/firebase-email-pswd-auth-1.png)
+![Output Image](../screenshots/firebase-email-pswd-auth-2.png)
+![Output Image](../screenshots/firebase-email-pswd-auth-3.png)
+![Output Image](../screenshots/firebase-email-pswd-auth-4.png)
